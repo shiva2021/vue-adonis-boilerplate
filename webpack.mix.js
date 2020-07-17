@@ -1,8 +1,8 @@
 let mix = require("laravel-mix");
 mix.setPublicPath("public/build");
-mix.sass("vue/assets/sass/gallery.scss", "public/build/sass");
+mix.sass("vue/assets/sass/app.scss", "public/build/sass");
 
-mix.js("vue/js/artgallery.js", "public/build");
+mix.js("vue/main.js", "public/build");
 mix.webpackConfig({
   resolve: {
     alias: {
@@ -12,7 +12,7 @@ mix.webpackConfig({
   },
   output: {
     filename: "[name].js",
-    chunkFilename: "js/[name].artgallery.js",
+    chunkFilename: "js/[name].main.js",
     publicPath: "/build/"
   }
 });
